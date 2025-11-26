@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto - EcoVida</title>
+    <link rel="stylesheet" href="../css/contacto.css">
+  </head>
+
+  <body>
+<header class="navbar">
+  <a href="../index.html" class="logo">
+    <img src="../img/logo.png" alt="EcoVida Logo">
+    <span class="logo-text">EcoVida</span>
+  </a>
+  <nav class="nav-links">
+    <a href="../index.html">Inicio</a>
+    <a href="productos.html">Productos</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+</header>
+
+    <section class="contact-wrapper">
+      <div class="contact-container">
+        <!-- Izquierda: Imagen/Info -->
+        <div class="contact-left">
+          <div class="contact-left-content">
+            <h2>¡Hablemos!</h2>
+            <p>
+              Estamos aquí para ayudarte con cualquier duda sobre nuestros
+              productos ecológicos.
+            </p>
+
+            <ul class="contact-info">
+              <li>contacto@ecovida.com</li>
+              <li>+57 300 123 4567</li>
+              <li>Barranquilla, Colombia</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Derecha: Formulario -->
+        <div class="contact-right">
+          <h3>Envíanos un mensaje</h3>
+          <p class="form-desc">
+            Completa el formulario y te responderemos en menos de 24 horas.
+          </p>
+
+          <form class="contact-form">
+            <div class="input-group">
+              <label>Nombre completo</label>
+              <input type="text" placeholder="Tu nombre" required />
+            </div>
+
+            <div class="input-group">
+              <label>Correo electrónico</label>
+              <input type="email" placeholder="correo@ejemplo.com" required />
+            </div>
+
+            <div class="input-group">
+              <label>Mensaje</label>
+              <textarea
+                placeholder="¿En qué podemos ayudarte?"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn-form">Enviar mensaje</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 EcoVida — Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+      // Prevenir recarga en el envío del formulario
+      document
+        .querySelector(".contact-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert("¡Gracias! Tu mensaje ha sido enviado (simulación).");
+          this.reset();
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,263 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productos - EcoVida</title>
+    <link rel="stylesheet" href="../css/productos.css">
+  </head>
+
+  <body>
+    <header class="navbar">
+      <a href="../index.html" class="logo">
+        <img src="../img/logo.png" alt="EcoVida Logo">
+        <span class="logo-text">EcoVida</span>
+      </a>
+      <nav class="nav-links">
+        <a href="../index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </header>
+
+    <!-- HERO DE PRODUCTOS -->
+    <section class="products-hero">
+      <div class="products-hero-content">
+        <h1>Nuestros Productos Ecológicos</h1>
+        <p>
+          Descubre nuestra selección de productos sostenibles y amigables con el
+          medio ambiente. Cada compra hace la diferencia.
+        </p>
+      </div>
+    </section>
+
+    <!-- FILTROS -->
+    <section class="filters-section">
+      <div class="filters-container">
+        <button class="filter-btn active" data-category="todos">Todos</button>
+        <button class="filter-btn" data-category="hogar">🏠 Hogar</button>
+        <button class="filter-btn" data-category="personal">
+          ✨ Cuidado Personal
+        </button>
+        <button class="filter-btn" data-category="exterior">🌱 Exterior</button>
+        <button class="filter-btn" data-category="destacado">
+          ⭐ Destacados
+        </button>
+      </div>
+    </section>
+
+    <!-- PRODUCTOS -->
+    <section class="products-section">
+      <div class="products-grid" id="productsGrid">
+        <div class="product-card" data-category="hogar destacado">
+          <div class="product-image">🛍️</div>
+          <span class="product-badge">Nuevo</span>
+          <div class="product-content">
+            <span class="product-category">Hogar</span>
+            <h3>Bolsas Biodegradables</h3>
+            <p>
+              100% compostables, resistentes y duraderas. Perfectas para tus
+              compras diarias.
+            </p>
+            <div class="product-footer">
+              <div class="product-price">$12.500 <small>/paquete</small></div>
+              <button class="btn-add">Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="personal destacado">
+          <div class="product-image">💧</div>
+          <span class="product-badge">Popular</span>
+          <div class="product-content">
+            <span class="product-category">Cuidado Personal</span>
+            <h3>Botellas Reutilizables</h3>
+            <p>
+              Acero inoxidable, mantiene la temperatura 24hrs. Diseño elegante y
+              ergonómico.
+            </p>
+            <div class="product-footer">
+              <div class="product-price">$45.000</div>
+              <button class="btn-add">Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="hogar">
+          <div class="product-image">🧼</div>
+          <div class="product-content">
+            <span class="product-category">Hogar</span>
+            <h3>Detergentes Ecológicos</h3>
+            <p>
+              Sin químicos tóxicos, biodegradables y con fragancias naturales.
+              Cuida tu ropa y el planeta.
+            </p>
+            <div class="product-footer">
+              <div class="product-price">$28.000 <small>/litro</small></div>
+              <button class="btn-add">Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="personal">
+          <div class="product-image">🪥</div>
+          <div class="product-content">
+            <span class="product-category">Cuidado Personal</span>
+            <h3>Cepillos de Bambú</h3>
+            <p>Cerdas suaves naturales, mango de bambú 100% biodegradable.</p>
+            <div class="product-footer">
+              <div class="product-price">$8.500 <small>/unidad</small></div>
+              <button class="btn-add">Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="hogar">
+          <div class="product-image">🍽️</div>
+          <div class="product-content">
+            <span class="product-category">Hogar</span>
+            <h3>Kit Cubiertos Portátil</h3>
+            <p>
+              Acero inoxidable con estuche de tela. Ideal para llevar a todas
+              partes.
+            </p>
+            <div class="product-footer">
+              <div class="product-price">$22.000</div>
+              <button class="btn-add">Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="exterior destacado">
+          <div class="product-image">🌿</div>
+          <span class="product-badge">Eco</span>
+          <div class="product-content">
+            <span class="product-category">Exterior</span>
+            <h3>Compostador Doméstico</h3>
+            <p>
+              Transforma tus residuos orgánicos en abono natural. Fácil de usar
+              y sin olores.
+            </p>
+            <div class="product-footer">
+              <div class="product-price">$85.000</div>
+              <button class="btn-add">Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="personal">
+          <div class="product-image">🧴</div>
+          <div class="product-content">
+            <span class="product-category">Cuidado Personal</span>
+            <h3>Shampoo Sólido Natural</h3>
+            <p>
+              Sin sulfatos ni parabenos. Rinde hasta 80 lavadas. Varios aromas
+              disponibles.
+            </p>
+            <div class="product-footer">
+              <div class="product-price">$18.500</div>
+              <button class="btn-add">Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="hogar">
+          <div class="product-image">🕯️</div>
+          <div class="product-content">
+            <span class="product-category">Hogar</span>
+            <h3>Velas de Soya Artesanales</h3>
+            <p>
+              Cera 100% natural, mechas de algodón. Aromas relajantes y duración
+              prolongada.
+            </p>
+            <div class="product-footer">
+              <div class="product-price">$32.000</div>
+              <button class="btn-add">Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="exterior">
+          <div class="product-image">🌾</div>
+          <div class="product-content">
+            <span class="product-category">Exterior</span>
+            <h3>Kit de Siembra Orgánico</h3>
+            <p>
+              Incluye semillas, sustrato y macetas biodegradables. Perfecto para
+              principiantes.
+            </p>
+            <div class="product-footer">
+              <div class="product-price">$24.500</div>
+              <button class="btn-add">Agregar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 EcoVida — Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+      // Sistema de filtros
+      const filterBtns = document.querySelectorAll(".filter-btn");
+      const productCards = document.querySelectorAll(".product-card");
+
+      filterBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          // Actualizar botón activo
+          filterBtns.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          const category = btn.dataset.category;
+
+          // Filtrar productos con animación
+          productCards.forEach((card) => {
+            if (
+              category === "todos" ||
+              card.dataset.category.includes(category)
+            ) {
+              card.style.display = "block";
+              setTimeout(() => {
+                card.style.opacity = "1";
+                card.style.transform = "scale(1)";
+              }, 10);
+            } else {
+              card.style.opacity = "0";
+              card.style.transform = "scale(0.9)";
+              setTimeout(() => {
+                card.style.display = "none";
+              }, 300);
+            }
+          });
+        });
+      });
+
+      // Botones "Agregar"
+      document.querySelectorAll(".btn-add").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          const productName = btn
+            .closest(".product-card")
+            .querySelector("h3").textContent;
+          btn.textContent = "✓ Agregado";
+          btn.style.background = "linear-gradient(135deg, #2a6f4a, #1b4332)";
+
+          setTimeout(() => {
+            btn.textContent = "Agregar";
+            btn.style.background = "linear-gradient(135deg, #52b788, #2a6f4a)";
+          }, 1500);
+        });
+      });
+
+      // Click en card para más detalles (opcional)
+      productCards.forEach((card) => {
+        card.addEventListener("click", () => {
+          console.log("Ver detalles del producto");
+          // Aquí puedes agregar un modal o redirección
+        });
+      });
+    </script>
+  </body>
+</html>
