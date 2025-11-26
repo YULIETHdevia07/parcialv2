@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoVida - Inicio</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="EcoVida Logo" />
+        <span class="logo-text">EcoVida</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="pages/productos.html">Productos</a>
+        <a href="pages/servicios.html">Servicios</a>
+        <a href="pages/contacto.html">Contacto</a>
+      </nav>
+
+      <button class="menu-btn">&#9776;</button>
+    </header>
+
+    <!-- HERO CON VIDEO DE YOUTUBE -->
+    <section class="hero">
+      <div class="youtube-background">
+        <iframe
+          src="https://www.youtube.com/embed/MZoYn9iyfRU?autoplay=1&mute=1&loop=1&playlist=MZoYn9iyfRU&controls=0&showinfo=0&modestbranding=1&rel=0&iv_load_policy=3&disablekb=1"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content"></div>
+      <div class="scroll-indicator"></div>
+    </section>
+
+    <!-- CARACTERÍSTICAS -->
+    <section class="features">
+      <div class="features-container">
+        <div class="section-title">
+          <h2>¿Por qué elegir EcoVida?</h2>
+          <p>
+            Nos comprometemos con un futuro sostenible a través de productos de
+            alta calidad y prácticas responsables.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🌱</div>
+            <h3>100% Ecológico</h3>
+            <p>
+              Todos nuestros productos están fabricados con materiales
+              sostenibles y biodegradables.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">♻️</div>
+            <h3>Compromiso Verde</h3>
+            <p>
+              Por cada compra, plantamos un árbol y compensamos la huella de
+              carbono.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🏆</div>
+            <h3>Calidad Garantizada</h3>
+            <p>
+              Productos certificados que cumplen los más altos estándares
+              ambientales.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTOS DESTACADOS -->
+    <section class="destacados">
+      <div class="destacados-container">
+        <div class="section-title">
+          <h2>Nuestros Productos Destacados</h2>
+          <p>
+            Descubre nuestra selección de productos más populares y amigables
+            con el medio ambiente.
+          </p>
+        </div>
+
+        <div class="cards">
+          <div class="card">
+            <div class="card-image">🛍️</div>
+            <div class="card-content">
+              <h3>Bolsas Biodegradables</h3>
+              <p>
+                100% hechas de materiales orgánicos. Resistentes y perfectas
+                para el uso diario.
+              </p>
+              <a href="pages/productos.html" class="btn-card">Ver más</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image">💧</div>
+            <div class="card-content">
+              <h3>Botellas Reutilizables</h3>
+              <p>
+                Diseño resistente y ecológico. Mantiene tu bebida fría o
+                caliente por horas.
+              </p>
+              <a href="pages/productos.html" class="btn-card">Ver más</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image">🧼</div>
+            <div class="card-content">
+              <h3>Detergentes Ecológicos</h3>
+              <p>
+                No tóxicos, seguros y amigables con el planeta. Limpieza
+                efectiva y natural.
+              </p>
+              <a href="pages/productos.html" class="btn-card">Ver más</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="cta-content">
+        <h2>Únete al Movimiento Verde</h2>
+        <p>
+          Descubre cómo pequeños cambios pueden generar un gran impacto en
+          nuestro planeta.
+        </p>
+        <a href="pages/contacto.html" class="btn-cta">Contáctanos</a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2025 EcoVida — Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+      // Menú móvil
+      const menuBtn = document.querySelector(".menu-btn");
+      const navLinks = document.querySelector(".nav-links");
+
+      menuBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+
+      // Cerrar menú al hacer clic en un enlace
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("active");
+        });
+      });
+
+      // Navbar scroll effect
+      window.addEventListener("scroll", () => {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+
+      // Smooth scroll para el indicador
+      document
+        .querySelector(".scroll-indicator")
+        .addEventListener("click", () => {
+          document
+            .querySelector(".features")
+            .scrollIntoView({ behavior: "smooth" });
+        });
+    </script>
+  </body>
+</html>
