@@ -25,20 +25,27 @@ body {
 .navbar {
   background: linear-gradient(90deg, #1b4332 0%, #2a6f4a 100%);
   color: #fff;
-  padding: 12px 20px;
+  padding: 16px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 50;
-  box-shadow: 0 4px 12px rgba(10, 20, 12, 0.08);
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(10, 20, 12, 0.15);
+  transition: all 0.3s;
+}
+
+.navbar.scrolled {
+  padding: 12px 40px;
+  box-shadow: 0 6px 30px rgba(10, 20, 12, 0.25);
 }
 
 .logo {
   font-weight: 800;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   letter-spacing: 0.5px;
   display: flex;
   align-items: center;
@@ -53,13 +60,13 @@ body {
 }
 
 .logo img {
-  height: 45px;
-  width: 45px;
+  height: 50px;
+  width: 50px;
   object-fit: cover;
   border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  border: 3px solid rgba(255, 255, 255, 0.3);
   background: white;
-  padding: 4px;
+  padding: 5px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: all 0.3s;
 }
@@ -71,13 +78,13 @@ body {
 }
 
 .logo-text {
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 800;
 }
 
 .nav-links {
   display: flex;
-  gap: 18px;
+  gap: 30px;
   align-items: center;
 }
 
@@ -85,41 +92,52 @@ body {
   color: white;
   text-decoration: none;
   font-weight: 600;
-  padding: 8px 12px;
+  padding: 8px 16px;
   border-radius: 8px;
-  transition: background 0.18s, transform 0.12s;
+  transition: all 0.25s;
+  position: relative;
 }
 
-.nav-links a:hover,
-.nav-links a:focus {
-  background: rgba(255, 255, 255, 0.08);
-  transform: translateY(-1px);
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 70%;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.menu-btn {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+  padding: 8px;
 }
 
 /* HERO DE SERVICIOS */
 .services-hero {
-  background: linear-gradient(
-      135deg,
-      rgba(27, 67, 50, 0.95),
-      rgba(42, 111, 74, 0.9)
-    ),
-    url("https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1200")
-      center/cover;
-  padding: 80px 20px;
+  background: linear-gradient(135deg, #1b4332 0%, #2a6f4a 50%, #52b788 100%);
+  padding: 140px 20px 80px;
   text-align: center;
   color: white;
   position: relative;
   overflow: hidden;
-}
-
-.services-hero::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  right: 0;
-  height: 80px;
-  background: linear-gradient(180deg, transparent, #f5f7f6);
+  margin-top: 0;
 }
 
 .services-hero-content {
@@ -399,14 +417,43 @@ footer {
   background: #081c15;
   color: #fff;
   text-align: center;
-  padding: 20px 12px;
+  padding: 40px 20px;
   margin-top: auto;
 }
 
+footer p {
+  opacity: 0.9;
+}
+
 /* RESPONSIVE */
-@media (max-width: 768px) {
+@media (max-width: 968px) {
+  .navbar {
+    padding: 16px 25px;
+  }
+
   .nav-links {
-    display: none;
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    background: linear-gradient(180deg, #1b4332, #2a6f4a);
+    flex-direction: column;
+    padding: 30px 0;
+    gap: 10px;
+    transition: left 0.4s;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .services-hero {
+    padding: 120px 20px 70px;
   }
 
   .services-hero h1 {
@@ -435,9 +482,17 @@ footer {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
+  .navbar {
+    padding: 12px 20px;
+  }
+
   .services-hero {
-    padding: 60px 20px;
+    padding: 100px 20px 60px;
+  }
+
+  .services-hero h1 {
+    font-size: 1.8rem;
   }
 
   .services-section {
